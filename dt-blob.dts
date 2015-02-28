@@ -204,6 +204,7 @@
                   pin@p51 { function = "sdcard"; termination = "pull_up";    drive_strength_mA = < 8 >; }; // SD D1
                   pin@p52 { function = "sdcard"; termination = "pull_up";    drive_strength_mA = < 8 >; }; // SD D2
                   pin@p53 { function = "sdcard"; termination = "pull_up";    drive_strength_mA = < 8 >; }; // SD D3
+                  pin@p17 { function = "output"; termination = "no_pulling"; polarity = "active_low"; startup_state = "active";}; // Sound OFF
 
                }; // pin_config
                pin_defines {
