@@ -15,8 +15,8 @@
 #
 ### BEGIN INIT INFO
 # Provides:          radiod
-# Should-Start:      
-# Should-Stop:       
+# Should-Start:      mopidy
+# Should-Stop:       mopidy
 # Required-Start:    $remote_fs $syslog   
 # Required-Stop:     $remote_fs $syslog 
 # Default-Start:     2 3 4 5
@@ -33,9 +33,9 @@ PATH=/sbin:/bin:/usr/sbin:/usr/bin
 # Change NAME parameter this next line to the version of the daemon you are using
 # Choices are radiod.py, radio4.py, rradiod.py, rradio4.py or ada_radio.py
 # No spaces around the = character
-NAME=radio4.py
+NAME=rradio_ada.py
 DESC="PI Radio Daemon"
-DAEMON=/home/pi/radio/${NAME}
+DAEMON=/home/pi/PiCcola/${NAME}
 
 # Exit if the package is not installed
 [ -x "$DAEMON" ] || exit 0
