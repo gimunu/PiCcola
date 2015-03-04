@@ -52,8 +52,13 @@
 # Italy
 (Italian Stations)
 [RAI Radio Uno] http://www.listenlive.eu/rai1.m3u
-[RAI Radio Duo] http://www.listenlive.eu/rai2.m3u
-[Prima Radio Napoli] http://kemoniastreaming2.net:8010/listen.pls
+[RAI Radio Due] http://www.listenlive.eu/rai2.m3u
+[Radio Cittá del Capo] http://stream.rcdc.it:8000/listen.pls
+[Radio 24] http://shoutcast.radio24.it:8000/listen.pls
+
+# Spain
+(Spanish Stations)
+[Radio Tres] http://radio3.rtve.stream.flumotion.com/rtve/radio3.mp3.m3u 
 
 # Country music
 (Country music)
