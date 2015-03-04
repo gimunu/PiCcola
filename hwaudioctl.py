@@ -60,7 +60,7 @@ parser.add_argument('-g', '--gain', action='store',
 
 args = parser.parse_args()
 
-print args.audio
+print args
 
 
 
@@ -75,9 +75,9 @@ if args.audio:
 if args.gain:
     GPIO.setup(GNPIN, GPIO.OUT)
     if (args.gain.lower() == "on"):
-        GPIO.output(GNPIN, GPIO.HIGH)
-    if (args.gain.lower() == "off"):
         GPIO.output(GNPIN, GPIO.LOW)
+    if (args.gain.lower() == "off"):
+        GPIO.output(GNPIN, GPIO.HIGH)
         
     
 

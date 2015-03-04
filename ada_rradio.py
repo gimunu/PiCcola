@@ -34,6 +34,29 @@ from radio_daemon import Daemon
 from radio_class import Radio
 from log_class import Log
 from rss_class import Rss
+from rotary_class import RotaryEncoder
+
+# Switch definitions
+# # Volume rotary encoder
+# LEFT_SWITCH = 14
+# RIGHT_SWITCH = 15
+# MUTE_SWITCH = 4
+# # Tuner rotary encoder
+# UP_SWITCH = 17
+# DOWN_SWITCH = 18
+# MENU_SWITCH = 25
+
+# Switch definitions (end GPIO B+)
+# Tuner rotary encoder
+MENU_SWITCH = 21
+LEFT_SWITCH = 16
+RIGHT_SWITCH = 13
+# Volume rotary encoder
+UP_SWITCH = 26
+DOWN_SWITCH = 20
+MUTE_SWITCH = 19 
+
+
 
 UP = 0
 DOWN = 1
@@ -78,11 +101,11 @@ class MyDaemon(Daemon):
 		message = "Radio pid " + str(os.getpid())
 		lcd.line1(message)
 		lcd.line2("IP " + ipaddr)
-		time.sleep(4)
-		log.message("Restarting MPD", log.INFO)
-		lcd.line2("Starting MPD")
+		time.sleep(6)
+		log.message("Restarting MPD/MODIPY", log.INFO)
+		lcd.line2("Starting MPD/MODIPY")
 		radio.start()
-		log.message("MPD started", log.INFO)
+		log.message("MPD/MODIPY started", log.INFO)
 
 		mpd_version = radio.execMpcCommand("version")
 		log.message(mpd_version, log.INFO)
@@ -554,7 +577,7 @@ def reload(lcd,radio):
 	source = radio.getSource()
 	if source == radio.RADIO:
 		lcd.line2("Radio Stations")
-		dirList=os.listdir("/var/lib/mpd/playlists")
+		dirList=os.listdir("/var/lib/mopidy/playlists/")
 		for fname in dirList:
 			log.message("Loading " + fname, log.DEBUG)
 			lcd.line2(fname)

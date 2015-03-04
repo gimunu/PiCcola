@@ -651,7 +651,7 @@ def reload(lcd,radio):
 	source = radio.getSource()
 	if source == radio.RADIO:
 		lcd.line2("Radio Stations")
-		dirList=os.listdir("/var/lib/mpd/playlists")
+		dirList=os.listdir("/var/lib/mopidy/playlists/")
 		for fname in dirList:
 			log.message("Loading " + fname, log.DEBUG)
 			lcd.line2(fname)

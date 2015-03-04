@@ -27,7 +27,7 @@ from xml.dom.minidom import parseString
 stderr = sys.stderr.write;
 
 # File locations
-PlsDirectory = '/var/lib/mpd/playlists/'
+PlsDirectory = '/var/lib/mopidy/playlists//'
 RadioLibDir = '/var/lib/radiod/'
 PodList = RadioLibDir + 'podcasts'
 

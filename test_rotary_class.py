@@ -24,12 +24,21 @@ from rotary_class import RotaryEncoder
 stderr = sys.stderr.write;
 
 # Switch definitions
-MENU_SWITCH = 25
-LEFT_SWITCH = 14
-RIGHT_SWITCH = 15
-UP_SWITCH = 17
-DOWN_SWITCH = 18
-MUTE_SWITCH = 4 
+# MENU_SWITCH = 25
+# LEFT_SWITCH = 14
+# RIGHT_SWITCH = 15
+# UP_SWITCH = 17
+# DOWN_SWITCH = 18
+# MUTE_SWITCH = 4
+
+# Switch definitions (end GPIO B+)
+MENU_SWITCH = 21
+LEFT_SWITCH = 16
+RIGHT_SWITCH = 13
+UP_SWITCH = 26
+DOWN_SWITCH = 20
+MUTE_SWITCH = 19 
+
 
 # Try to trap any exit errors 
 def exit_fn():

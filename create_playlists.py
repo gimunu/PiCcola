@@ -31,13 +31,13 @@ from xml.dom.minidom import parseString
 stderr = sys.stderr.write;
 
 # File locations
-PlsDirectory = '/var/lib/mpd/playlists/'
-RadioDir = '/home/pi/radio/'
+PlsDirectory = '/var/lib/mopidy/playlists/'
+RadioDir = '/home/pi/PiCcola/'
 RadioLibDir = '/var/lib/radiod/'
 StationList = RadioLibDir + 'stationlist'
-DistFile = '/home/pi/radio/station.urls'
+DistFile = '/home/pi/PiCcola/station.urls'
 TempDir = '/tmp/radio_stream_files/'
-PlaylistsDir = '/home/pi/radio/playlists/'
+PlaylistsDir = '/home/pi/PiCcola/playlists/'
 PodcastsFile = '/var/lib/radiod/podcasts'
 
 duplicateCount = 0
